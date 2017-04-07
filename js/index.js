@@ -1,4 +1,4 @@
-createCalendar('root', 2016, 5)
+createCalendar('root', 2016, 12)
 function createCalendar(id, year, month) {
 
     var calendarContainer = document.createElement('div');
@@ -16,8 +16,8 @@ function renderHeader(year, month) {
     yearElem = document.createElement('span');
 
     header.classList.add('header');
-
-    monthElem.textContent = month;
+    var getMonthName = new Date(year, month-1).toLocaleDateString('en-us', {month: 'long'});
+    monthElem.textContent = getMonthName;
     yearElem.textContent = year;
     monthElem.classList.add('header__month');
     yearElem.classList.add('header__year');
@@ -74,6 +74,9 @@ function renderTBody(year, month) {
             if(!(i == 0 && j < startDay) && dayCount <= daysInMouth){
                 td.textContent = dayCount;
                 dayCount++;
+                if(j == 5 || j == 6) {
+                    td.style.color = 'red';
+                }
             }
             tr.appendChild(td);
         }
