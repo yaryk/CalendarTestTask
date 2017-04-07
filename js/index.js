@@ -57,30 +57,29 @@ function renderTHead() {
 
 function renderTBody(year, month) {
     var tBody = document.createElement('tbody'),
-        daysInMouth = new Date(year, month - 1, 0).getDate(),
-        day = new Date(year, month - 1).getDay();
-        if(day == 0) {
-            day = 7;
+        daysInMouth = new Date(year, month, 0).getDate(),
+        startDay = new Date(year, month - 1).getDay(),
+        dayCount = 1;
+        if(startDay == 0) {
+            startDay = 7;
         }
-    for (var i = 0; i <= daysInMouth; i++) {
+        startDay--;
+        var rowCount = Math.ceil((daysInMouth + startDay) / 7);
+   
+    for (var i = 0; i < rowCount; i++) {
         var tr = document.createElement('tr');
-        
-        for (var j = 0; j < 7; j++) {
+
+        for(var j = 0; j < 7; j++){
             var td = document.createElement('td');
-            if(day > daysInMouth) {
-                tr.appendChild(td);
-                break;
+            if(!(i == 0 && j < startDay) && dayCount <= daysInMouth){
+                td.textContent = dayCount;
+                dayCount++;
             }
-            if (!(day > j) || day >= 7) {
-                td.textContent = day;
-                day++;
-                i++;
-            } 
-           
             tr.appendChild(td);
         }
-
+        
         tBody.appendChild(tr);
     }
+
     return tBody;
 }
