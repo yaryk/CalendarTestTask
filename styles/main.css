@@ -1,0 +1,42 @@
+* {
+    font-family: sans-serif;
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: '../fonts/Roboto-Medium';
+}
+.calendarContainer {
+    width: 800px;
+    margin: 0 auto;
+    
+}
+
+.header {
+    background-color: #00bcd4;
+    height: 80px;
+    line-height: 80px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.header span {
+    display: inline-block;
+    color: #fff;    
+    font-size: 25px;
+}
+
+.header__year {
+    float: right;
+    margin-right: 10px;
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.daysRow {
+    background: #E8E8E8;
+    height: 40px;
+    color: #919191;
+}
