@@ -5,10 +5,14 @@
     font-family: 'RobotoMedium';
     src: '../fonts/Roboto-Medium';
 }
-.calendarContainer {
+
+#root {
     width: 800px;
     margin: 0 auto;
-    
+}
+
+.calendarContainer {
+    width: 100%;
 }
 
 .header {
@@ -30,13 +34,63 @@
 }
 
 table {
-    width: 800px;
+    width: 100%;
     border-collapse: collapse;
     margin-top: 8px;
+    border: 1px solid #ddd;
+}
+
+table td {
+    cursor: pointer;
+    text-align: center;
+    height: 40px;
 }
 
 .daysRow {
     background: #E8E8E8;
     height: 40px;
     color: #919191;
+}
+
+/*
+modal window stylig
+*/
+.tingle-modal-box {
+    width: 35%;
+}
+
+.modal_container {
+    width: 100%;
+    text-align: center;
+}
+
+.modal__cal {
+    width: 100px;
+    border-radius: 5px;
+    height: 120px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 0 10px #ddd;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.modal__ribbon {
+    display: inline-block;
+    height: 35px;
+    width: 100%;
+    background: #00bcd4;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal__day {
+    font-size: 50px;
+    display: block;
+}
+
+.modal__month {
+   font-size: 33px;
+
 }

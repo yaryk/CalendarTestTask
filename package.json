@@ -18,6 +18,8 @@
   "bugs": {
     "url": "https://github.com/yaryk/CalendarTestTask/issues"
   },
-  "homepage": "https://github.com/yaryk/CalendarTestTask#readme"w
- 
+  "homepage": "https://github.com/yaryk/CalendarTestTask#readme",
+  "dependencies": {
+    "tingle.js": "^0.9.0"
+  }
 }
