@@ -1,9 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 * {
-    font-family: sans-serif;
-}
-@font-face {
-    font-family: 'RobotoMedium';
-    src: '../fonts/Roboto-Medium';
+    font-family: 'Open Sans', sans-serif;
 }
 
 #root {
@@ -16,10 +14,10 @@
 }
 
 .header {
-    background-color: #00bcd4;
+    background-color: #2BBBAD;
     height: 80px;
     line-height: 80px;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 5px #ddd;
 }
 
 .header span {
@@ -33,11 +31,15 @@
     margin-right: 10px;
 }
 
+.header__month {
+    margin-left: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 8px;
     border: 1px solid #ddd;
+    box-shadow: 0px 3px 5px #ddd;
 }
 
 table td {
@@ -50,6 +52,13 @@ table td {
     background: #E8E8E8;
     height: 40px;
     color: #919191;
+}
+.date{
+    transition: background 0.3s;
+}
+.date:hover {
+    background: #2BBBAD;
+    color: white!important;
 }
 
 /*
@@ -80,7 +89,7 @@ modal window stylig
     display: inline-block;
     height: 35px;
     width: 100%;
-    background: #00bcd4;
+    background: #2BBBAD;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
