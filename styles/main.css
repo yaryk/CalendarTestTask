@@ -53,16 +53,18 @@ table td {
     height: 40px;
     color: #919191;
 }
+
 .date{
     transition: background 0.3s;
 }
+
 .date:hover {
     background: #2BBBAD;
     color: white!important;
 }
 
 /*
-modal window stylig
+modal window on click stylig
 */
 .tingle-modal-box {
     width: 35%;
