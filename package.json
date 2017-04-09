@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/yaryk/CalendarTestTask#readme",
   "dependencies": {
-    "material-ripple": "^0.2.5",
     "tingle.js": "^0.9.0"
   }
 }
